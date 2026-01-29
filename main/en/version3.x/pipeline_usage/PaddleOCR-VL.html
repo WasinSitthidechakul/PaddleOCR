@@ -4998,7 +4998,7 @@ You're not viewing the latest version.
 </li>
 </ol>
 <h2 id="inference-device-support-for-paddleocr-vl">Inference Device Support for PaddleOCR-VL<a class="headerlink" href="#inference-device-support-for-paddleocr-vl" title="Permanent link">&para;</a></h2>
-<p>Currently, PaddleOCR-VL offers four inference methods, with varying levels of support for different inference devices. Please confirm that your inference device meets the requirements in the table below before proceeding with PaddleOCR-VL deployment:</p>
+<p>Currently, PaddleOCR-VL offers five inference methods, with varying levels of support for different inference devices. Please confirm that your inference device meets the requirements in the table below before proceeding with PaddleOCR-VL deployment:</p>
 <table border="1">
 <thead>
   <tr>
@@ -5010,6 +5010,7 @@ You're not viewing the latest version.
     <th>Iluvatar GPU</th>
     <th>Huawei Ascend NPU</th>
     <th>x64 CPU</th>
+    <th>Apple Silicon</th>
   </tr>
 </thead>
 <tbody>
@@ -5022,9 +5023,10 @@ You're not viewing the latest version.
     <td>✅</td>
     <td>🚧</td>
     <td>✅</td>
+    <td>✅</td>
   </tr>
   <tr style="text-align: center;">
-    <td>vLLM</td>
+    <td>PaddlePaddle + vLLM</td>
     <td>✅</td>
     <td>🚧</td>
     <td>✅</td>
@@ -5032,9 +5034,10 @@ You're not viewing the latest version.
     <td>🚧</td>
     <td>✅</td>
     <td>❌</td>
+    <td>❌</td>
   </tr>
   <tr style="text-align: center;">
-    <td>SGLang</td>
+    <td>PaddlePaddle + SGLang</td>
     <td>✅</td>
     <td>🚧</td>
     <td>🚧</td>
@@ -5042,9 +5045,10 @@ You're not viewing the latest version.
     <td>🚧</td>
     <td>🚧</td>
     <td>❌</td>
+    <td>❌</td>
   </tr>
   <tr style="text-align: center;">
-    <td>FastDeploy</td>
+    <td>PaddlePaddle + FastDeploy</td>
     <td>✅</td>
     <td>✅</td>
     <td>🚧</td>
@@ -5052,9 +5056,25 @@ You're not viewing the latest version.
     <td>✅</td>
     <td>🚧</td>
     <td>❌</td>
+    <td>❌</td>
+  </tr>
+  <tr style="text-align: center;">
+    <td>PaddlePaddle + MLX-VLM</td>
+    <td>❌</td>
+    <td>❌</td>
+    <td>❌</td>
+    <td>❌</td>
+    <td>❌</td>
+    <td>❌</td>
+    <td>❌</td>
+    <td>✅</td>
   </tr>
 </tbody>
 </table>
+
+<details><summary>Explanation of Inference Method</summary>
+"PaddlePaddle" indicates that both the layout detection model and the VLM use the PaddlePaddle framework for inference. This is the default mode for the PaddleOCR CLI and Python API. Other inference method follow the format "Layout Detection Model Inference method + VLM Inference method". For example, "PaddlePaddle + vLLM" means the layout detection model uses PaddlePaddle, while the VLM uses vLLM.
+</details>
 
 <div class="admonition tip">
 <p class="admonition-title">Tip</p>
@@ -5070,8 +5090,7 @@ You're not viewing the latest version.
 </blockquote>
 </li>
 <li>vLLM compatibility note: Although vLLM can be launched on NVIDIA GPUs with CC 7.x such as T4/V100, timeout or OOM issues may occur, and its use is not recommended.</li>
-<li>Currently, PaddleOCR-VL does not support ARM architecture CPUs. More hardware support will be expanded based on actual needs in the future, so stay tuned!</li>
-<li>vLLM, SGLang, and FastDeploy cannot run natively on Windows or macOS. Please use the Docker images we provide.</li>
+<li>vLLM, SGLang, and FastDeploy cannot run natively on Windows. Please use the Docker images we provide.</li>
 </ul>
 </div>
 <p>Since different hardware requires different dependencies, if your hardware meets the requirements in the table above, please refer to the following table for the corresponding tutorial to configure your environment:</p>
@@ -5111,8 +5130,17 @@ You're not viewing the latest version.
 <td>Huawei Ascend NPU</td>
 <td><a href="PaddleOCR-VL-NPU.html">PaddleOCR-VL NPU Environment Configuration Tutorial</a></td>
 </tr>
+<tr>
+<td>Apple Silicon</td>
+<td><a href="PaddleOCR-VL-Apple-Silicon.html">PaddleOCR-VL Apple Silicon Environment Configuration Tutorial</a></td>
+</tr>
 </tbody>
 </table>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>
+For example, if you are using an RTX 50 series GPU that meets the device requirements for both PaddlePaddle and vLLM inference methods, please refer to the <a href="PaddleOCR-VL-NVIDIA-Blackwell.html">PaddleOCR-VL NVIDIA Blackwell Architecture GPU Environment Configuration Tutorial</a> to complete the environment configuration before using PaddleOCR-VL.</p>
+</div>
 <h2 id="1-environment-preparation">1. Environment Preparation<a class="headerlink" href="#1-environment-preparation" title="Permanent link">&para;</a></h2>
 <p>This section explains how to set up the runtime environment for PaddleOCR-VL. Choose one of the following two methods:</p>
 <ul>
@@ -5170,7 +5198,7 @@ For example:
 <div class="admonition important">
 <p class="admonition-title">Important</p>
 <p>
-<strong>Please ensure that you install PaddlePaddle framework version 3.2.1 or above.</strong> For macOS users, please use Docker to set up the environment.</p>
+<strong>Please ensure that you install PaddlePaddle framework version 3.2.1 or above.</strong></p>
 </div>
 <h2 id="2-quick-start">2. Quick Start<a class="headerlink" href="#2-quick-start" title="Permanent link">&para;</a></h2>
 <p>PaddleOCR-VL supports two usage methods: CLI command line and Python API. The CLI command line method is simpler and suitable for quickly verifying functionality, while the Python API method is more flexible and suitable for integration into existing projects.</p>
