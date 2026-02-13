@@ -7973,6 +7973,7 @@ foreach ($result as $i => $item) {
 </span><span id="__span-39-8"><a id="__codelineno-39-8" name="__codelineno-39-8" href="#__codelineno-39-8"></a><span class="w">      </span><span class="nt">sk</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">xxx</span>
 </span><span id="__span-39-9"><a id="__codelineno-39-9" name="__codelineno-39-9" href="#__codelineno-39-9"></a><span class="w">      </span><span class="nt">key_prefix</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">deploy</span>
 </span><span id="__span-39-10"><a id="__codelineno-39-10" name="__codelineno-39-10" href="#__codelineno-39-10"></a><span class="w">    </span><span class="nt">return_img_urls</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">True</span>
+</span><span id="__span-39-11"><a id="__codelineno-39-11" name="__codelineno-39-11" href="#__codelineno-39-11"></a><span class="w">    </span><span class="nt">url_expires_in</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">3600</span>
 </span></code></pre></div>
 <p>目前支持将生成的图像存储至百度智能云对象存储（BOS）并返回 URL。相关参数说明如下：</p>
 <ul>
@@ -7982,6 +7983,7 @@ foreach ($result as $i => $item) {
 <li><code>bucket_name</code>：存储空间名称，必须配置。</li>
 <li><code>key_prefix</code>：Object key 的统一前缀。</li>
 <li><code>connection_timeout_in_mills</code>：请求超时时间（单位：毫秒）。</li>
+<li><code>url_expires_in</code>：URL 有效期（单位：秒）。<code>-1</code> 表示永不过期。</li>
 </ul>
 <p>有关 AK/SK 获取等更多信息，请参考 <a href="https://cloud.baidu.com/doc/BOS/index.html">百度智能云官方文档</a>。</p>
 <p><strong>修改 PDF 解析页数限制</strong></p>

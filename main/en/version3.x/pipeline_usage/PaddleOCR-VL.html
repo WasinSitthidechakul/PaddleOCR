@@ -7992,6 +7992,7 @@ If you do not need to adjust pipeline configurations, you can ignore this sectio
 </span><span id="__span-38-8"><a id="__codelineno-38-8" name="__codelineno-38-8" href="#__codelineno-38-8"></a><span class="w">      </span><span class="nt">sk</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">xxx</span>
 </span><span id="__span-38-9"><a id="__codelineno-38-9" name="__codelineno-38-9" href="#__codelineno-38-9"></a><span class="w">      </span><span class="nt">key_prefix</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">deploy</span>
 </span><span id="__span-38-10"><a id="__codelineno-38-10" name="__codelineno-38-10" href="#__codelineno-38-10"></a><span class="w">    </span><span class="nt">return_img_urls</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">True</span>
+</span><span id="__span-38-11"><a id="__codelineno-38-11" name="__codelineno-38-11" href="#__codelineno-38-11"></a><span class="w">    </span><span class="nt">url_expires_in</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">3600</span>
 </span></code></pre></div>
 <p>Currently, storing generated images in Baidu Intelligent Cloud Object Storage (BOS) and returning URLs is supported. The parameters are described as follows:</p>
 <ul>
@@ -8001,6 +8002,7 @@ If you do not need to adjust pipeline configurations, you can ignore this sectio
 <li><code>bucket_name</code>: Storage bucket name (required).</li>
 <li><code>key_prefix</code>: Unified prefix for object keys.</li>
 <li><code>connection_timeout_in_mills</code>: Request timeout in milliseconds.</li>
+<li><code>url_expires_in</code>: URL validity period (in seconds). <code>-1</code> indicates it never expires.</li>
 </ul>
 <p>For more information on obtaining AK/SK and other details, refer to the <a href="https://cloud.baidu.com/doc/BOS/index.html">Baidu Intelligent Cloud Official Documentation</a>.</p>
 <p><strong>Modify PDF Parsing Page Limit</strong></p>
