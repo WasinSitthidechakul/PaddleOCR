@@ -1142,18 +1142,18 @@
         <xhtml:link rel="alternate" hreflang="en" href="https://paddlepaddle.github.io/PaddleOCR/mainen/version3.x/pipeline_usage/PaddleOCR-VL-Apple-Silicon.html"/>
     </url>
     <url>
-        <loc>https://paddlepaddle.github.io/PaddleOCR/main/version3.x/pipeline_usage/PaddleOCR-VL-HYGON-DCU.html</loc>
-        <lastmod>2026-02-13</lastmod>
-        <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="zh" href="https://paddlepaddle.github.io/PaddleOCR/main/version3.x/pipeline_usage/PaddleOCR-VL-HYGON-DCU.html"/>
-        <xhtml:link rel="alternate" hreflang="en" href="https://paddlepaddle.github.io/PaddleOCR/mainen/version3.x/pipeline_usage/PaddleOCR-VL-HYGON-DCU.html"/>
-    </url>
-    <url>
         <loc>https://paddlepaddle.github.io/PaddleOCR/main/version3.x/pipeline_usage/PaddleOCR-VL-Huawei-Ascend-NPU.html</loc>
         <lastmod>2026-02-13</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="zh" href="https://paddlepaddle.github.io/PaddleOCR/main/version3.x/pipeline_usage/PaddleOCR-VL-Huawei-Ascend-NPU.html"/>
         <xhtml:link rel="alternate" hreflang="en" href="https://paddlepaddle.github.io/PaddleOCR/mainen/version3.x/pipeline_usage/PaddleOCR-VL-Huawei-Ascend-NPU.html"/>
+    </url>
+    <url>
+        <loc>https://paddlepaddle.github.io/PaddleOCR/main/version3.x/pipeline_usage/PaddleOCR-VL-Hygon-DCU.html</loc>
+        <lastmod>2026-02-13</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="zh" href="https://paddlepaddle.github.io/PaddleOCR/main/version3.x/pipeline_usage/PaddleOCR-VL-Hygon-DCU.html"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://paddlepaddle.github.io/PaddleOCR/mainen/version3.x/pipeline_usage/PaddleOCR-VL-Hygon-DCU.html"/>
     </url>
     <url>
         <loc>https://paddlepaddle.github.io/PaddleOCR/main/version3.x/pipeline_usage/PaddleOCR-VL-Iluvatar-GPU.html</loc>
@@ -1163,11 +1163,11 @@
         <xhtml:link rel="alternate" hreflang="en" href="https://paddlepaddle.github.io/PaddleOCR/mainen/version3.x/pipeline_usage/PaddleOCR-VL-Iluvatar-GPU.html"/>
     </url>
     <url>
-        <loc>https://paddlepaddle.github.io/PaddleOCR/main/version3.x/pipeline_usage/PaddleOCR-VL-KUNLUNXIN-XPU.html</loc>
+        <loc>https://paddlepaddle.github.io/PaddleOCR/main/version3.x/pipeline_usage/PaddleOCR-VL-Kunlunxin-XPU.html</loc>
         <lastmod>2026-02-13</lastmod>
         <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="zh" href="https://paddlepaddle.github.io/PaddleOCR/main/version3.x/pipeline_usage/PaddleOCR-VL-KUNLUNXIN-XPU.html"/>
-        <xhtml:link rel="alternate" hreflang="en" href="https://paddlepaddle.github.io/PaddleOCR/mainen/version3.x/pipeline_usage/PaddleOCR-VL-KUNLUNXIN-XPU.html"/>
+        <xhtml:link rel="alternate" hreflang="zh" href="https://paddlepaddle.github.io/PaddleOCR/main/version3.x/pipeline_usage/PaddleOCR-VL-Kunlunxin-XPU.html"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://paddlepaddle.github.io/PaddleOCR/mainen/version3.x/pipeline_usage/PaddleOCR-VL-Kunlunxin-XPU.html"/>
     </url>
     <url>
         <loc>https://paddlepaddle.github.io/PaddleOCR/main/version3.x/pipeline_usage/PaddleOCR-VL-MetaX-GPU.html</loc>
@@ -2394,18 +2394,18 @@
         <xhtml:link rel="alternate" hreflang="zh" href="https://paddlepaddle.github.io/PaddleOCR/mainversion3.x/pipeline_usage/PaddleOCR-VL-Apple-Silicon.html"/>
     </url>
     <url>
-        <loc>https://paddlepaddle.github.io/PaddleOCR/main/en/version3.x/pipeline_usage/PaddleOCR-VL-HYGON-DCU.html</loc>
-        <lastmod>2026-02-13</lastmod>
-        <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="en" href="https://paddlepaddle.github.io/PaddleOCR/main/en/version3.x/pipeline_usage/PaddleOCR-VL-HYGON-DCU.html"/>
-        <xhtml:link rel="alternate" hreflang="zh" href="https://paddlepaddle.github.io/PaddleOCR/mainversion3.x/pipeline_usage/PaddleOCR-VL-HYGON-DCU.html"/>
-    </url>
-    <url>
         <loc>https://paddlepaddle.github.io/PaddleOCR/main/en/version3.x/pipeline_usage/PaddleOCR-VL-Huawei-Ascend-NPU.html</loc>
         <lastmod>2026-02-13</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="en" href="https://paddlepaddle.github.io/PaddleOCR/main/en/version3.x/pipeline_usage/PaddleOCR-VL-Huawei-Ascend-NPU.html"/>
         <xhtml:link rel="alternate" hreflang="zh" href="https://paddlepaddle.github.io/PaddleOCR/mainversion3.x/pipeline_usage/PaddleOCR-VL-Huawei-Ascend-NPU.html"/>
+    </url>
+    <url>
+        <loc>https://paddlepaddle.github.io/PaddleOCR/main/en/version3.x/pipeline_usage/PaddleOCR-VL-Hygon-DCU.html</loc>
+        <lastmod>2026-02-13</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://paddlepaddle.github.io/PaddleOCR/main/en/version3.x/pipeline_usage/PaddleOCR-VL-Hygon-DCU.html"/>
+        <xhtml:link rel="alternate" hreflang="zh" href="https://paddlepaddle.github.io/PaddleOCR/mainversion3.x/pipeline_usage/PaddleOCR-VL-Hygon-DCU.html"/>
     </url>
     <url>
         <loc>https://paddlepaddle.github.io/PaddleOCR/main/en/version3.x/pipeline_usage/PaddleOCR-VL-Iluvatar-GPU.html</loc>
@@ -2415,11 +2415,11 @@
         <xhtml:link rel="alternate" hreflang="zh" href="https://paddlepaddle.github.io/PaddleOCR/mainversion3.x/pipeline_usage/PaddleOCR-VL-Iluvatar-GPU.html"/>
     </url>
     <url>
-        <loc>https://paddlepaddle.github.io/PaddleOCR/main/en/version3.x/pipeline_usage/PaddleOCR-VL-KUNLUNXIN-XPU.html</loc>
+        <loc>https://paddlepaddle.github.io/PaddleOCR/main/en/version3.x/pipeline_usage/PaddleOCR-VL-Kunlunxin-XPU.html</loc>
         <lastmod>2026-02-13</lastmod>
         <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="en" href="https://paddlepaddle.github.io/PaddleOCR/main/en/version3.x/pipeline_usage/PaddleOCR-VL-KUNLUNXIN-XPU.html"/>
-        <xhtml:link rel="alternate" hreflang="zh" href="https://paddlepaddle.github.io/PaddleOCR/mainversion3.x/pipeline_usage/PaddleOCR-VL-KUNLUNXIN-XPU.html"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://paddlepaddle.github.io/PaddleOCR/main/en/version3.x/pipeline_usage/PaddleOCR-VL-Kunlunxin-XPU.html"/>
+        <xhtml:link rel="alternate" hreflang="zh" href="https://paddlepaddle.github.io/PaddleOCR/mainversion3.x/pipeline_usage/PaddleOCR-VL-Kunlunxin-XPU.html"/>
     </url>
     <url>
         <loc>https://paddlepaddle.github.io/PaddleOCR/main/en/version3.x/pipeline_usage/PaddleOCR-VL-MetaX-GPU.html</loc>

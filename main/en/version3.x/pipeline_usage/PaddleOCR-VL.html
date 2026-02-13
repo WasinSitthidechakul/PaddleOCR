@@ -1861,7 +1861,7 @@ You're not viewing the latest version.
   <span class="md-ellipsis">
     
   
-    PaddleOCR-VL NVIDIA Blackwell-Architecture GPUs Environment Configuration Tutorial
+    PaddleOCR-VL NVIDIA Blackwell-Architecture GPUs Usage Tutorial
   
 
     
@@ -1882,14 +1882,14 @@ You're not viewing the latest version.
   
   
     <li class="md-nav__item">
-      <a href="PaddleOCR-VL-KUNLUNXIN-XPU.html" class="md-nav__link">
+      <a href="PaddleOCR-VL-Kunlunxin-XPU.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    PaddleOCR-VL KUNLUNXIN XPU Environment Configuration Tutorial
+    PaddleOCR-VL Kunlunxin XPU Usage Tutorial
   
 
     
@@ -1910,14 +1910,14 @@ You're not viewing the latest version.
   
   
     <li class="md-nav__item">
-      <a href="PaddleOCR-VL-HYGON-DCU.html" class="md-nav__link">
+      <a href="PaddleOCR-VL-Hygon-DCU.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    PaddleOCR-VL HYGON DCU Environment Configuration Tutorial
+    PaddleOCR-VL Hygon DCU Usage Tutorial
   
 
     
@@ -1945,7 +1945,7 @@ You're not viewing the latest version.
   <span class="md-ellipsis">
     
   
-    PaddleOCR-VL MetaX GPU Environment Configuration Tutorial
+    PaddleOCR-VL MetaX GPU Usage Tutorial
   
 
     
@@ -1973,7 +1973,7 @@ You're not viewing the latest version.
   <span class="md-ellipsis">
     
   
-    PaddleOCR-VL Iluvatar GPU Environment Configuration Tutorial
+    PaddleOCR-VL Iluvatar GPU Usage Tutorial
   
 
     
@@ -2001,7 +2001,7 @@ You're not viewing the latest version.
   <span class="md-ellipsis">
     
   
-    PaddleOCR-VL Huawei Ascend NPU Environment Configuration Tutorial
+    PaddleOCR-VL Huawei Ascend NPU Usage Tutorial
   
 
     
@@ -2029,7 +2029,7 @@ You're not viewing the latest version.
   <span class="md-ellipsis">
     
   
-    PaddleOCR-VL Apple Silicon Environment Configuration Tutorial
+    PaddleOCR-VL Apple Silicon Usage Tutorial
   
 
     
@@ -5027,11 +5027,11 @@ You're not viewing the latest version.
 <div class="admonition info">
 <p class="admonition-title">Info</p>
 <p>
-PaddleOCR provides a unified interface for the PaddleOCR-VL model series to facilitate quick setup and usage. Unless otherwise specified, the term "PaddleOCR-VL" in subsequent sections and related environment configuration documentation refers to the PaddleOCR-VL model series (e.g., PaddleOCR-VL-1.5). References specific to the PaddleOCR-VL v1 version will be explicitly noted.</p>
+PaddleOCR provides a unified interface for the PaddleOCR-VL model series to facilitate quick setup and usage. Unless otherwise specified, the term "PaddleOCR-VL" in subsequent sections and related usage tutorials refers to the PaddleOCR-VL model series (e.g., PaddleOCR-VL-1.5). References specific to the PaddleOCR-VL v1 version will be explicitly noted.</p>
 </div>
 <h2 id="process-guide">Process Guide<a class="headerlink" href="#process-guide" title="Permanent link">&para;</a></h2>
 <p>Before starting, please refer to the next section for information on the inference device support provided by PaddleOCR-VL to <strong>determine if your device meets the operational requirements.</strong> If your device meets the requirements, please select the relevant section to read based on your needs.</p>
-<p>For some inference hardware, you may need to refer to other environment configuration documents we provide, but the process remains the same and does not affect your reading of the following process guide:</p>
+<p>For some inference hardware, you may need to refer to other usage tutorials we provide, but the process remains the same and does not affect your reading of the following process guide:</p>
 <ol>
 <li>
 <p><strong>Want to quickly experience PaddleOCR-VL</strong>:</p>
@@ -5061,8 +5061,8 @@ PaddleOCR provides a unified interface for the PaddleOCR-VL model series to faci
   <tr>
     <th>Inference Method</th>
     <th>NVIDIA GPU</th>
-    <th>KUNLUNXIN XPU</th>
-    <th>HYGON DCU</th>
+    <th>Kunlunxin XPU</th>
+    <th>Hygon DCU</th>
     <th>MetaX GPU</th>
     <th>Iluvatar GPU</th>
     <th>Huawei Ascend NPU</th>
@@ -5161,12 +5161,12 @@ PaddleOCR provides a unified interface for the PaddleOCR-VL model series to faci
 <li>vLLM, SGLang, and FastDeploy cannot run natively on Windows. Please use the Docker images we provide.</li>
 </ul>
 </div>
-<p>Since different hardware requires different dependencies, if your hardware meets the requirements in the table above, please refer to the following table for the corresponding tutorial to configure your environment:</p>
+<p>Since different hardware requires different dependencies, if your hardware meets the requirements in the table above, please refer to the following table for the corresponding usage tutorial:</p>
 <table>
 <thead>
 <tr>
 <th>Hardware Type</th>
-<th>Environment Configuration Tutorial</th>
+<th>Usage Tutorial</th>
 </tr>
 </thead>
 <tbody>
@@ -5176,38 +5176,38 @@ PaddleOCR provides a unified interface for the PaddleOCR-VL model series to faci
 </tr>
 <tr>
 <td>NVIDIA GPU</td>
-<td>- NVIDIA Blackwell architecture GPU (e.g., RTX 50 series) refer to <a href="PaddleOCR-VL-NVIDIA-Blackwell.html">PaddleOCR-VL NVIDIA Blackwell Architecture GPU Environment Configuration Tutorial</a> <br/> - Other NVIDIA GPUs refer to this tutorial</td>
+<td>- NVIDIA Blackwell architecture GPU (e.g., RTX 50 series) refer to <a href="PaddleOCR-VL-NVIDIA-Blackwell.html">PaddleOCR-VL NVIDIA Blackwell Architecture GPU Usage Tutorial</a> <br/> - Other NVIDIA GPUs refer to this tutorial</td>
 </tr>
 <tr>
-<td>KUNLUNXIN XPU</td>
-<td><a href="PaddleOCR-VL-KUNLUNXIN-XPU.html">PaddleOCR-VL KUNLUNXIN XPU Environment Configuration Tutorial</a></td>
+<td>Kunlunxin XPU</td>
+<td><a href="PaddleOCR-VL-Kunlunxin-XPU.html">PaddleOCR-VL Kunlunxin XPU Usage Tutorial</a></td>
 </tr>
 <tr>
-<td>HYGON DCU</td>
-<td><a href="PaddleOCR-VL-HYGON-DCU.html">PaddleOCR-VL HYGON DCU Environment Configuration Tutorial</a></td>
+<td>Hygon DCU</td>
+<td><a href="PaddleOCR-VL-Hygon-DCU.html">PaddleOCR-VL Hygon DCU Usage Tutorial</a></td>
 </tr>
 <tr>
 <td>MetaX GPU</td>
-<td><a href="PaddleOCR-VL-MetaX-GPU.html">PaddleOCR-VL MetaX GPU Environment Configuration Tutorial</a></td>
+<td><a href="PaddleOCR-VL-MetaX-GPU.html">PaddleOCR-VL MetaX GPU Usage Tutorial</a></td>
 </tr>
 <tr>
 <td>Iluvatar GPU</td>
-<td><a href="PaddleOCR-VL-Iluvatar-GPU.html">PaddleOCR-VL Iluvatar GPU Environment Configuration Tutorial</a></td>
+<td><a href="PaddleOCR-VL-Iluvatar-GPU.html">PaddleOCR-VL Iluvatar GPU Usage Tutorial</a></td>
 </tr>
 <tr>
 <td>Huawei Ascend NPU</td>
-<td><a href="PaddleOCR-VL-Huawei-Ascend-NPU.html">PaddleOCR-VL Huawei Ascend NPU Environment Configuration Tutorial</a></td>
+<td><a href="PaddleOCR-VL-Huawei-Ascend-NPU.html">PaddleOCR-VL Huawei Ascend NPU Usage Tutorial</a></td>
 </tr>
 <tr>
 <td>Apple Silicon</td>
-<td><a href="PaddleOCR-VL-Apple-Silicon.html">PaddleOCR-VL Apple Silicon Environment Configuration Tutorial</a></td>
+<td><a href="PaddleOCR-VL-Apple-Silicon.html">PaddleOCR-VL Apple Silicon Usage Tutorial</a></td>
 </tr>
 </tbody>
 </table>
 <div class="admonition tip">
 <p class="admonition-title">Tip</p>
 <p>
-For example, if you are using an RTX 50 series GPU that meets the device requirements for both PaddlePaddle and vLLM inference methods, please refer to the <a href="PaddleOCR-VL-NVIDIA-Blackwell.html">PaddleOCR-VL NVIDIA Blackwell Architecture GPU Environment Configuration Tutorial</a> to complete the environment configuration before using PaddleOCR-VL.</p>
+For example, if you are using an RTX 50 series GPU that meets the device requirements for both PaddlePaddle and vLLM inference methods, please refer to the <a href="PaddleOCR-VL-NVIDIA-Blackwell.html">PaddleOCR-VL NVIDIA Blackwell Architecture GPU Usage Tutorial</a> to learn about relevant configurations and usage.</p>
 </div>
 <h2 id="1-environment-preparation">1. Environment Preparation<a class="headerlink" href="#1-environment-preparation" title="Permanent link">&para;</a></h2>
 <p>This section explains how to set up the runtime environment for PaddleOCR-VL. Choose one of the following two methods:</p>
@@ -5280,10 +5280,10 @@ The methods introduced in this section are primarily for rapid validation. Their
 <div class="language-shell highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="c1"># NVIDIA GPU</span>
 </span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>paddleocr<span class="w"> </span>doc_parser<span class="w"> </span>-i<span class="w"> </span>https://paddle-model-ecology.bj.bcebos.com/paddlex/imgs/demo_image/paddleocr_vl_demo.png
 </span><span id="__span-4-3"><a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a>
-</span><span id="__span-4-4"><a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a><span class="c1"># KUNLUNXIN XPU</span>
+</span><span id="__span-4-4"><a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a><span class="c1"># Kunlunxin XPU</span>
 </span><span id="__span-4-5"><a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a>paddleocr<span class="w"> </span>doc_parser<span class="w"> </span>-i<span class="w"> </span>./paddleocr_vl_demo.png<span class="w"> </span>--device<span class="w"> </span>xpu
 </span><span id="__span-4-6"><a id="__codelineno-4-6" name="__codelineno-4-6" href="#__codelineno-4-6"></a>
-</span><span id="__span-4-7"><a id="__codelineno-4-7" name="__codelineno-4-7" href="#__codelineno-4-7"></a><span class="c1"># HYGON DCU</span>
+</span><span id="__span-4-7"><a id="__codelineno-4-7" name="__codelineno-4-7" href="#__codelineno-4-7"></a><span class="c1"># Hygon DCU</span>
 </span><span id="__span-4-8"><a id="__codelineno-4-8" name="__codelineno-4-8" href="#__codelineno-4-8"></a>paddleocr<span class="w"> </span>doc_parser<span class="w"> </span>-i<span class="w"> </span>./paddleocr_vl_demo.png<span class="w"> </span>--device<span class="w"> </span>dcu
 </span><span id="__span-4-9"><a id="__codelineno-4-9" name="__codelineno-4-9" href="#__codelineno-4-9"></a>
 </span><span id="__span-4-10"><a id="__codelineno-4-10" name="__codelineno-4-10" href="#__codelineno-4-10"></a><span class="c1"># MetaX GPU</span>
@@ -5697,9 +5697,9 @@ If MKL-DNN is not available or the model does not support acceleration via MKL-D
 </span><span id="__span-5-2"><a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a>
 </span><span id="__span-5-3"><a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a><span class="c1"># NVIDIA GPU</span>
 </span><span id="__span-5-4"><a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a><span class="n">pipeline</span> <span class="o">=</span> <span class="n">PaddleOCRVL</span><span class="p">()</span>
-</span><span id="__span-5-5"><a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a><span class="c1"># KUNLUNXIN XPU</span>
+</span><span id="__span-5-5"><a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a><span class="c1"># Kunlunxin XPU</span>
 </span><span id="__span-5-6"><a id="__codelineno-5-6" name="__codelineno-5-6" href="#__codelineno-5-6"></a><span class="c1"># pipeline = PaddleOCRVL(device=&quot;xpu&quot;)</span>
-</span><span id="__span-5-7"><a id="__codelineno-5-7" name="__codelineno-5-7" href="#__codelineno-5-7"></a><span class="c1"># HYGON DCU</span>
+</span><span id="__span-5-7"><a id="__codelineno-5-7" name="__codelineno-5-7" href="#__codelineno-5-7"></a><span class="c1"># Hygon DCU</span>
 </span><span id="__span-5-8"><a id="__codelineno-5-8" name="__codelineno-5-8" href="#__codelineno-5-8"></a><span class="c1"># pipeline = PaddleOCRVL(device=&quot;dcu&quot;)</span>
 </span><span id="__span-5-9"><a id="__codelineno-5-9" name="__codelineno-5-9" href="#__codelineno-5-9"></a><span class="c1"># MetaX GPU</span>
 </span><span id="__span-5-10"><a id="__codelineno-5-10" name="__codelineno-5-10" href="#__codelineno-5-10"></a><span class="c1"># pipeline = PaddleOCRVL(device=&quot;metax_gpu&quot;)</span>
