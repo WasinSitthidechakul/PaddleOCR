@@ -6490,7 +6490,7 @@ PaddleOCR 为 PaddleOCR-VL 系列模型提供了统一的接口，方便用户�
 <h2 id="3-vlm">3. 使用推理加速框架提升 VLM 推理性能<a class="headerlink" href="#3-vlm" title="Permanent link">&para;</a></h2>
 <p>默认配置下的推理性能未经过充分优化，可能无法满足实际生产需求。此步骤主要介绍如何使用 vLLM、SGLang 和 FastDeploy 推理加速框架来提升 PaddleOCR-VL 的推理性能。</p>
 <h3 id="31-vlm">3.1 启动 VLM 推理服务<a class="headerlink" href="#31-vlm" title="Permanent link">&para;</a></h3>
-<p>启动 VLM 推理服务有以下两种方式，任选一种即可：</p>
+<p>启动 VLM 推理服务有以下三种方式，任选一种即可：</p>
 <ul>
 <li>
 <p>方法一：使用官方 Docker 镜像启动服务，目前支持：</p>
@@ -6508,7 +6508,7 @@ PaddleOCR 为 PaddleOCR-VL 系列模型提供了统一的接口，方便用户�
 </ul>
 </li>
 <li>
-<p>方法三：直接使用推理加速框架启动服务，目前支持：</p>
+<p>方法三：直接使用推理加速框架启动服务（此方法无法应用 PaddleOCR 预置的性能调优参数），目前支持：</p>
 <ul>
 <li>FastDeploy</li>
 <li>vLLM</li>
