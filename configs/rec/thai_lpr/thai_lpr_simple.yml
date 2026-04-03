@@ -22,6 +22,8 @@ Global:
   distributed: false
   save_res_path: ./output/rec/predicts_thai_lpr_simple.txt
   early_stop_patience: 10  # Stop training if no improvement for 10 evaluations (set 0 to disable)
+  use_amp: true  # Mixed precision training for 2x speed
+  amp_level: O1  # O1 is more stable than O2
 
 Optimizer:
   name: Adam
@@ -82,7 +84,7 @@ Train:
         - length
   loader:
     shuffle: true
-    batch_size_per_card: 128
+    batch_size_per_card: 256  # Doubled for better GPU usage
     drop_last: true
     num_workers: 2
 
@@ -107,5 +109,5 @@ Eval:
   loader:
     shuffle: false
     drop_last: false
-    batch_size_per_card: 128
+    batch_size_per_card: 256  # Doubled for better GPU usage
     num_workers: 2
