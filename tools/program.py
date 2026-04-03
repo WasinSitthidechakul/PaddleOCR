@@ -918,9 +918,9 @@ def preprocess(is_train=False):
     elif use_metax_gpu:  # Use Enflame GCU(General Compute Unit)
         device = "metax:{0}".format(os.getenv("FLAGS_selected_metaxs", 0))
     elif use_iluvatar_gpu:
-        device = "iluvatar_gpu:{0}".format(dist.ParallelEnv().dev_id)
+        device = "iluvatar_gpu:{0}".format(dist.ParallelEnv().device_id)
     else:
-        device = "gpu:{}".format(dist.ParallelEnv().dev_id) if use_gpu else "cpu"
+        device = "gpu:{}".format(dist.ParallelEnv().device_id) if use_gpu else "cpu"
     check_device(
         use_gpu, use_xpu, use_npu, use_mlu, use_gcu, use_iluvatar_gpu, use_metax_gpu
     )
