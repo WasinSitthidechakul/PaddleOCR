@@ -32,3 +32,20 @@ dist/
 /deploy/android_demo/app/cache/
 test_tipc/web/models/
 test_tipc/web/node_modules/
+
+# Images
+*.png
+*.jpg
+*.jpeg
+*.gif
+*.bmp
+*.tiff
+*.tif
+*.webp
+*.svg
+*.ico
+*.psd
+*.raw
+*.heif
+*.heic
+*.avif
