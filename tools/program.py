@@ -44,7 +44,7 @@ from ppocr.utils.export_model import export
 class ArgsParser(ArgumentParser):
     def __init__(self):
         super(ArgsParser, self).__init__(formatter_class=RawDescriptionHelpFormatter)
-        self.add_argument("-c", "--config", help="configuration file to use")
+        self.add_argument("-c", "--config", default="configs/rec/thai_lpr/thai_lpr_simple.yml", help="configuration file to use")
         self.add_argument("-o", "--opt", nargs="+", help="set configuration options")
         self.add_argument(
             "-p",
@@ -262,6 +262,11 @@ def train(
     train_stats = TrainingStats(log_smooth_window, ["lr"])
     model_average = False
     model.train()
+
+    # Early stopping parameters
+    early_stop_patience = config["Global"].get("early_stop_patience", 0)
+    early_stop_counter = 0
+    early_stop_enabled = early_stop_patience > 0
 
     use_srn = config["Architecture"]["algorithm"] == "SRN"
     extra_input_models = [
@@ -566,6 +571,21 @@ def train(
                         epoch=epoch,
                         global_step=global_step,
                     )
+                    # Reset early stopping counter when improved
+                    if early_stop_enabled:
+                        early_stop_counter = 0
+                else:
+                    # Increment early stopping counter when no improvement
+                    if early_stop_enabled:
+                        early_stop_counter += 1
+                        logger.info(
+                            f"Early stopping counter: {early_stop_counter}/{early_stop_patience}"
+                        )
+                        if early_stop_counter >= early_stop_patience:
+                            logger.info(
+                                f"Early stopping triggered after {early_stop_patience} epochs without improvement"
+                            )
+                            return
                 best_str = "best metric, {}".format(
                     ", ".join(
                         ["{}: {}".format(k, v) for k, v in best_model_dict.items()]
@@ -920,7 +940,7 @@ def preprocess(is_train=False):
     elif use_iluvatar_gpu:
         device = "iluvatar_gpu:{0}".format(dist.ParallelEnv().device_id)
     else:
-        device = "gpu:{}".format(dist.ParallelEnv().device_id) if use_gpu else "cpu"
+        device = "gpu:{}".format(os.getenv("FLAGS_selected_gpus", 0)) if use_gpu else "cpu"
     check_device(
         use_gpu, use_xpu, use_npu, use_mlu, use_gcu, use_iluvatar_gpu, use_metax_gpu
     )

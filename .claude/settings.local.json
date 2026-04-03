@@ -1,0 +1,9 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(python tools/train.py -o Train.loader.batch_size_per_card=32 Eval.loader.batch_size_per_card=32)"
+    ],
+    "deny": [],
+    "ask": []
+  }
+}

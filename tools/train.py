@@ -17,6 +17,9 @@ from __future__ import absolute_import
 from __future__ import division
 from __future__ import print_function
 
+import faulthandler
+faulthandler.enable()
+
 import os
 import sys
 
@@ -51,8 +54,10 @@ def main(config, device, logger, vdl_writer, seed):
     global_config = config["Global"]
 
     # build dataloader
+    print(">>> Step 1: building train dataloader...", flush=True)
     set_signal_handlers()
     train_dataloader = build_dataloader(config, "Train", device, logger, seed)
+    print(f">>> Step 1 done: {len(train_dataloader)} batches", flush=True)
     if len(train_dataloader) == 0:
         logger.error(
             "No Images in train dataset, please ensure\n"
@@ -68,7 +73,9 @@ def main(config, device, logger, vdl_writer, seed):
     step_pre_epoch = len(train_dataloader)
 
     # build post process
+    print(">>> Step 2: building post process...", flush=True)
     post_process_class = build_post_process(config["PostProcess"], global_config)
+    print(">>> Step 2 done", flush=True)
 
     # build model
     # for rec algorithm
@@ -136,7 +143,9 @@ def main(config, device, logger, vdl_writer, seed):
         if config["PostProcess"]["name"] == "SARLabelDecode":  # for SAR model
             config["Loss"]["ignore_index"] = char_num - 1
 
+    print(">>> Step 3: building model...", flush=True)
     model = build_model(config["Architecture"])
+    print(">>> Step 3 done: model built", flush=True)
 
     use_sync_bn = config["Global"].get("use_sync_bn", False)
     if use_sync_bn:
