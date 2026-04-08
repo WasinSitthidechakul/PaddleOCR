@@ -10,7 +10,7 @@ Global:
   eval_batch_step: [0, 500]
   eval_batch_epoch: 1  # Evaluate every epoch for early stopping
   cal_metric_during_train: true
-  pretrained_model:
+  pretrained_model: ./My_Trained_Model/Trained_Syn/best_accuracy
   checkpoints:
   save_inference_dir: ./output/thai_lpr_simple/inference
   use_visualdl: false
@@ -22,7 +22,7 @@ Global:
   distributed: false
   save_res_path: ./output/rec/predicts_thai_lpr_simple.txt
   early_stop_patience: 10  # Stop training if no improvement for 10 evaluations (set 0 to disable)
-  use_amp: true  # Mixed precision training for 2x speed
+  use_amp: false  # Mixed precision training for 2x speed
   amp_level: O1  # O1 is more stable than O2
 
 Optimizer:
