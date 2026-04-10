@@ -2,15 +2,15 @@ Global:
   model_name: thai_lpr_rec_simple
   debug: false
   use_gpu: true
-  epoch_num: 200
+  epoch_num: 1500
   log_smooth_window: 20
   print_batch_step: 10
   save_model_dir: ./output/thai_lpr_simple
   save_epoch_step: 20
-  eval_batch_step: [0, 500]
+  eval_batch_step: [0, 100]
   eval_batch_epoch: 1  # Evaluate every epoch for early stopping
   cal_metric_during_train: true
-  pretrained_model: ./My_Trained_Model/Trained_Syn/best_accuracy
+  pretrained_model:
   checkpoints:
   save_inference_dir: ./output/thai_lpr_simple/inference
   use_visualdl: false
@@ -21,7 +21,7 @@ Global:
   use_space_char: true
   distributed: false
   save_res_path: ./output/rec/predicts_thai_lpr_simple.txt
-  early_stop_patience: 10  # Stop training if no improvement for 10 evaluations (set 0 to disable)
+  early_stop_patience: 15  # Stop training if no improvement for 15 evaluations (set 0 to disable)
   use_amp: false  # Mixed precision training for 2x speed
   amp_level: O1  # O1 is more stable than O2
 
@@ -31,8 +31,8 @@ Optimizer:
   beta2: 0.999
   lr:
     name: Cosine
-    learning_rate: 0.001
-    warmup_epoch: 5
+    learning_rate: 0.0001
+    warmup_epoch: 10
   regularizer:
     name: L2
     factor: 3.0e-05
@@ -84,9 +84,9 @@ Train:
         - length
   loader:
     shuffle: true
-    batch_size_per_card: 256  # Doubled for better GPU usage
+    batch_size_per_card: 32
     drop_last: true
-    num_workers: 2
+    num_workers: 8
 
 Eval:
   dataset:
@@ -109,5 +109,5 @@ Eval:
   loader:
     shuffle: false
     drop_last: false
-    batch_size_per_card: 256  # Doubled for better GPU usage
-    num_workers: 2
+    batch_size_per_card: 32
+    num_workers: 8

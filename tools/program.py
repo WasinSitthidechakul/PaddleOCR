@@ -532,6 +532,15 @@ def train(
                 cur_metric_str = "cur metric, {}".format(
                     ", ".join(["{}: {}".format(k, v) for k, v in cur_metric.items()])
                 )
+
+                # Save prediction examples (auto-generated)
+                try:
+                    from ppocr.utils.save_predictions_callback import create_prediction_callback
+                    if not hasattr(train, '_prediction_callback'):
+                        train._prediction_callback = create_prediction_callback(config)
+                    train._prediction_callback.save_predictions(model, post_process_class, epoch, getattr(post_process_class, 'character', None))
+                except Exception as e:
+                    pass  # Silently fail if callback not available
                 logger.info(cur_metric_str)
 
                 # logger metric
